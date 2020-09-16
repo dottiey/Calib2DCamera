@@ -288,8 +288,6 @@ def main():
     sp = ap.add_subparsers(dest='command')  # Save command in variable command
     sp.required = True  # A command is mandatory
 
-# calibraPianoLaser("guido", pathImgLaser, numPianoRiferimento, thresholdCOG)
-
     sub1 = sp.add_parser('calib_laser_plane')
     sub1.add_argument('model', help='Calibration model to save')
     sub1.add_argument('images', help='Image file of the lines laser')
@@ -318,8 +316,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# thresholdCOG = 80
-# numPianoRiferimento = 20
-# pathImgLaser = "opencv\\laser\\*.tif"
-# calibraPianoLaser("guido", pathImgLaser, numPianoRiferimento, thresholdCOG)
