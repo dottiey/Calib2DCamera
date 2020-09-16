@@ -10,7 +10,6 @@ import numpy as np
 arrayImg=[]
 
 def calibSquare(path_img, grid_W, grid_H, distance):
-    # path = Path("C://Users//T15115//Desktop//calib_op//plate//*.png")
     path=Path(path_img)
     imgs = [cv2.imread(str(i), 0) for i in path.parent.glob(path.name)]
     print (type(imgs[0]))
@@ -27,8 +26,6 @@ def calibSquare(path_img, grid_W, grid_H, distance):
     return (d_coef,mtx,camera_matrix,tvecs,rvecs)
 
 def calibCircles(path_img, grid_W, grid_H, distance):
-    # path = Path("C://Users//T15115//Desktop//calib_qatn//*.png")
-    # path = Path("C://Users//T15115//Documents//Progetti//Argus BYC//Software calibrazione//Procedure Halcon Calibrazione//TLC311//opencv//plate//*.tif")
     path=Path(path_img)
     imgs = [cv2.imread(str(i), 0) for i in path.parent.glob(path.name)]
     # params = detect_warp(imgs, (7, 7), False, 3.75)
@@ -176,15 +173,3 @@ def main():
 if __name__ == '__main__':
     main()
 
-
-# path = Path("C://Users//T15115//Desktop//calib_qatn//*.png")
-# params=calibSquare()
-# params=calibCircles(path)
-# import pdb; pdb.set_trace()
-# # img = cv2.imread("C://Users//T15115//Desktop//calib_qatn//1.png", 0)
-# # show_img("ee",img)
-# # imgUnd=undistImg(img, params[1][0], params[0], params[2])
-# # show_img("imgUnd",imgUnd)
-# pts = np.array([[500.0, 500.0], [1000.0, 1000.0]])
-# undis_points(pts,params[2],params[0])
-# import pdb; pdb.set_trace()
