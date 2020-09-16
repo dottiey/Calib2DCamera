@@ -7,9 +7,8 @@ python calib.py calib_chessboard -W 10 -H 7 -d 3.75 nomeFileSalvataggioParametri
 
 ESTRINSECI
 
-python estrinseci.py calib_laser_plane guido "opencv\\laser\\*.tif" 20 80
+python estrinseci.py calib_laser_plane Marco "opencv\\laser\\*.tif" 20 80
 
-
-examples arugs spin
-python calib.py calib_circle -W 7 -H 7 -d 6 argusCam1 "Testa riparata\cam1\plate\*.tif"
-python estrinseci.py calib_laser_plane argusCam1 "Testa riparata\cam1\laser\*.tif" 23 80
+example
+python calib.py calib_circle -W 7 -H 7 -d 6 Cam1 "cam1\plate\*.tif"
+python estrinseci.py calib_laser_plane Cam1 "cam1\laser\*.tif" 23 80
